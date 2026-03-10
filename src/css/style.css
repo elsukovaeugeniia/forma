@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 200px;
+}
+
+.btn:hover {
+  background-color: #c82333;
+}
+
+.popover {
+  position: absolute;
+  top: 168px; /* Опускаем ближе к кнопке (подберите значение) */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px; /* Компактнее */
+  display: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Меньше тень */
+  z-index: 1000;
+  max-width: 400px;
+  word-break: break-word;
+}
+
+.popover .title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.popover .content {
+  line-height: 1.4;
+  color: #666;
+  font-size: 13px;
+}
+
+/* Стрелка, направленная вниз к кнопке */
+.popover::before {
+  content: '';
+  position: absolute;
+  top: 100%; /* Стрелка внизу попвера */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #ddd; /* Цвет стрелки */
+}
